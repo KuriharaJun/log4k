@@ -2,9 +2,21 @@ import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.41")
+    id("org.jetbrains.kotlin.jvm") version "1.3.41"
     jacoco
     id("org.jetbrains.dokka") version "0.9.18"
+    id("org.jlleitschuh.gradle.ktlint") version "8.1.0"
+}
+
+buildscript {
+    repositories {
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath("org.jlleitschuh.gradle:ktlint-gradle:8.1.0")
+    }
 }
 
 dependencies {
