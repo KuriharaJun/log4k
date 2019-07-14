@@ -1,5 +1,7 @@
 ## Welcome to GitHub Pages
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7d7b304d65a54ac099d9c1233ec4b732)](https://app.codacy.com/app/KuriharaJun/log4k?utm_source=github.com&utm_medium=referral&utm_content=KuriharaJun/log4k&utm_campaign=Badge_Grade_Dashboard)
+
 You can use the [editor on GitHub](https://github.com/KuriharaJun/log4k/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
