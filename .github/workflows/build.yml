@@ -20,12 +20,23 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - run: brew install ktlint
     - name: auth
       run: chmod 755 gradlew
     - name: "Setup Java"
       uses: actions/setup-java@v1
       with:
         java-version: 11
+    - name: run ktlint
+      run: |
+        ktlint --reporter=checkstyle,output=build/ktlint-report-in-checkstyle-format.xml
+    - uses: yutailang0119/action-ktlint@v1.0.0
+      with:
+        xml_path: build/ktlint-report-in-checkstyle-format.xml
+    - name: build
+      uses: eskatos/gradle-command-action@v1
+      with:
+        arguments: build
     - name: run test
       uses: eskatos/gradle-command-action@v1
       with:
