@@ -20,6 +20,8 @@ jobs:
          uses: actions/setup-java@v1.4.3 
          with:
           java-version: 11
+       - name: auth
+         run: chmod 755 gradlew
        - name: run ktlint
          run: |
           ./gradlew ktlintCheck
@@ -35,6 +37,8 @@ jobs:
       uses: actions/setup-java@v1.4.3
       with:
         java-version: 11
+    - name: auth
+      run: chmod 755 gradlew
     - name: build
       uses: eskatos/gradle-command-action@v1
       with:
